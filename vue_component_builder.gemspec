@@ -10,14 +10,13 @@ Gem::Specification.new do |spec|
   spec.email         = ["yonathalmeida@gmail.com"]
 
   spec.summary       = %q{Generate Vue component CRUD from Rails model mapping}
-  spec.description   = %q{Wrapper vue component}
+  spec.description   = %q{Generate Vue component CRUD from Rails model mapping}
   spec.homepage      = "https://github.com/Yonatha/vue_component_builder"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
     spec.metadata["source_code_uri"] = "https://github.com/Yonatha/vue_component_builder"
