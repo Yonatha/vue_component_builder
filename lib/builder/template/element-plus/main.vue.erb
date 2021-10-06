@@ -1,0 +1,62 @@
+<template>
+  <div style='width: 100%'>
+    <el-main>
+      <el-row :gutter='24'>
+        <el-col :span='4'>
+          <Settingsmenu/>
+        </el-col>
+        <el-col :span='13'>
+          <el-tabs v-model='this.activeTabName' type='border-card'>
+            <el-tab-pane name='<%= @options[:model][:name] %>_tab'>
+
+              <template #label>
+                <span><i class='el-icon-check'></i> <%= @options[:model][:name].capitalize %></span>
+              </template>
+
+              <el-form :model='<%= @options[:model][:name] %>'>
+
+                <%= @form_attributes %>
+
+                <el-button-group>
+                  <el-button v-if='this.<%= @options[:model][:name] %>.id' @click='this.update()' plain type='primary'>Atualizar</el-button>
+                  <el-button v-else @click='this.create()' plain type='success'>Salvar</el-button>
+                  <el-popconfirm
+                    v-if='this.<%= @options[:model][:name] %>.id'
+                    confirm-button-text='Sim'
+                    cancel-button-text='Não'
+                    icon='el-icon-info'
+                    icon-color='orange'
+                    title='Deseja realmente excluir este registro?'
+                    @confirm='this.destroy()'
+                  >
+                    <template #reference>
+                      <el-button type='danger'>Excluir</el-button>
+                    </template>
+                  </el-popconfirm>
+                  <el-button @click='this.resetForm()' plain type='info'>Novo</el-button>
+                </el-button-group>
+              </el-form>
+              <br>
+              <el-divider></el-divider>
+              <br>
+              <%= @table %>
+            </el-tab-pane>
+          </el-tabs>
+        </el-col>
+      </el-row>
+    </el-main>
+  </div>
+</template>
+
+<style>
+  .showRecord {
+    cursor: pointer;
+    color: rgb(64, 158, 255);
+    display: block;
+    padding: 5px;
+  }
+</style>
+
+<script>
+    <%= @script %>
+</script>

@@ -1,0 +1,9 @@
+<el-row :gutter='24'>
+  <el-col :span='24'>
+    <el-form-item label='<%= @attribute[:label] %>' :label-width='formLabelWidth'>
+      <el-date-picker format="DD/MM/YYYY"
+                      style="width: 129px"
+                      v-model='<%= "#{@options[:model][:name]}.#{@attribute[:name]}" %>' type='date'></el-date-picker>
+    </el-form-item>
+  </el-col>
+</el-row>

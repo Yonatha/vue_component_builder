@@ -1,0 +1,15 @@
+async update() {
+    if(this.validateForm()){
+        const payload = this.<%= @options[:model][:name] %>
+            const response = await api.put(
+            `<%= "#{@options[:model][:name].pluralize}/${this.#{@options[:model][:name]}.id}" %>`,
+            payload
+        );
+        this.$notify({
+            title: '<%= @options[:model][:name].capitalize %>',
+            message: response.data.message,
+            quadrant: 'success',
+        });
+        this.index();
+    }
+}

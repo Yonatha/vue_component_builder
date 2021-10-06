@@ -1,0 +1,8 @@
+if (this.<%= @options[:model][:name] %>.<%= @attribute[:name] %> === null) {
+    this.$notify({
+        title: 'Atenção',
+        message: 'O campo <%= @attribute[:label] %> deve ser preenchido',
+        type: 'warning'
+    }, {root: true})
+    return false
+}

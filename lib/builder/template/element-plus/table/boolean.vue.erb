@@ -1,0 +1,9 @@
+<el-table-column
+  prop='<%= @attribute[:name] %>'
+  label='<%= @attribute[:label] %>'
+  width='110px'>
+  <template #default='<%= @options[:model][:name] %>'>
+    <el-tag v-if='<%= "#{@options[:model][:name]}.row.#{@attribute[:name]}" %>' type='success'>Sim</el-tag>
+    <el-tag v-else type='danger'>Não</el-tag>
+  </template>
+</el-table-column>

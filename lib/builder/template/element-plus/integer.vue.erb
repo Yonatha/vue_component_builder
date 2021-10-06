@@ -1,0 +1,9 @@
+<!-- <%= "#{@field[:name]}" %> -->
+<el-row :gutter='24'>
+  <el-col :span='24'>
+    <el-form-item label='<%= @field[:label] %>' :label-width='formLabelWidth'>
+      <el-input-number v-model='this.<%= "#{@options[:model][:name]}.#{@field[:name]}" %>' autocomplete='off'></el-input-number>
+    </el-form-item>
+  </el-col>
+</el-row>
+

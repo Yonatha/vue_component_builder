@@ -1,0 +1,8 @@
+<el-row :gutter='24'>
+  <el-col :span='24'>
+    <el-form-item label='<%= @attribute[:label] %>' :label-width='formLabelWidth'>
+      <el-switch
+        v-model='<%= "#{@options[:model][:name]}.#{@attribute[:name]}" %>'></el-switch>
+    </el-form-item>
+  </el-col>
+</el-row>

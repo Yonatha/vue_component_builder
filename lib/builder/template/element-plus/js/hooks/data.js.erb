@@ -1,0 +1,13 @@
+data() {
+    return {
+        activeTabName: '<%= @options[:model][:name] %>_tab',
+        formLabelWidth: '120px',
+        
+        <%= @options[:model][:name] %>:
+        {
+            id: null,
+            <%= @attributes %>
+        },
+        <%= @options[:model][:name].pluralize %>:[],
+    }
+}

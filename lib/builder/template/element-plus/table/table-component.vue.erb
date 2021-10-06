@@ -1,0 +1,11 @@
+<el-row :gutter='24'>
+  <el-col :span='24'>
+    <el-scrollbar height='350px'>
+      <el-table
+        :data='<%= @options[:model][:name].pluralize %>'
+        style='width: 100%'>
+        <%= @columns %>
+      </el-table>
+    </el-scrollbar>
+  </el-col>
+</el-row>

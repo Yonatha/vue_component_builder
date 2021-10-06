@@ -1,0 +1,7 @@
+async <%=@method_name %>() {
+    this.loading = true;
+    const response = await api.delete(`<%= "#{@options[:model][:name].pluralize}/${this.#{@options[:model][:name]}.id}" %>`,);
+    this.<%= @options[:model][:name].pluralize %> = response.data;
+    this.index();
+    this.loading = false;
+},

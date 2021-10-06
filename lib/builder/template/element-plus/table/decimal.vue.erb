@@ -1,0 +1,10 @@
+<el-table-column
+  prop='<%= @attribute[:name] %>'
+  label='<%= @attribute[:label] %>'
+  width='auto'>
+  <template #default='<%= @options[:model][:name] %>'>
+                        <span class='showRecord' @click='show(<%= @options[:model][:name] %>.row.id)'>
+                          {{ <%= "#{@options[:model][:name]}.row.#{@attribute[:name]}" %> }}
+                        </span>
+  </template>
+</el-table-column>
