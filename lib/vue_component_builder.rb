@@ -1,10 +1,10 @@
-require "vue_component/version"
+require "vue_component_builder/version"
 require 'rails/generators/base'
 require 'fileutils'
 
-module VueComponent
+module VueComponentBuilder
   module Generators
-    class BuilderGenerator < Rails::Generators::Base
+    class NewGenerator < Rails::Generators::Base
 
       def execute
         p 'Building Vue component...'
@@ -19,7 +19,7 @@ module VueComponent
               theme=element-plus
               exclude=id,created_at,updated_at [optional]
 
-            rails g vue_component:builder model=Fruit  component=MyFruitComponent theme=element-plus exclude=id,created_at,updated_at
+            rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=element-plus exclude=id,created_at,updated_at
           ERROR
         end
 

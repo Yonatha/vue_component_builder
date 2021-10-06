@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "vue_component/version"
+require "vue_component_builder/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "vue_component"
-  spec.version       = VueComponent::VERSION
+  spec.name          = "vue_component_builder"
+  spec.version       = VueComponentBuilder::VERSION
   spec.authors       = ["Yonatha Almeida"]
   spec.email         = ["yonathalmeida@gmail.com"]
 
   spec.summary       = %q{Generate Vue component CRUD from Rails model mapping}
   spec.description   = %q{Wrapper vue component}
-  spec.homepage      = "https://github.com/Yonatha/yovue"
+  spec.homepage      = "https://github.com/Yonatha/vue_component_builder"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/Yonatha/vue_component"
-    spec.metadata["changelog_uri"] = "https://github.com/Yonatha/vue_component"
+    spec.metadata["source_code_uri"] = "https://github.com/Yonatha/vue_component_builder"
+    spec.metadata["changelog_uri"] = "https://github.com/Yonatha/vue_component_builder"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
