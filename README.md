@@ -38,6 +38,11 @@ exclude=id,created_at,updated_at [optional]
 $ rails g vue_component:builder model=Fruit  component=MyFruitComponent theme=element-plus exclude=id,created_at,updated_at
 ```
 
+The new component will be generated inside in your Rails public folder 
+```shell
+public/MyFruitComponent.vue
+```
+
 ### TODO / coming soon
 
 - Implement gem test;
