@@ -31,6 +31,20 @@ module VueComponentBuilder
 
         input[:exclude] = input[:exclude].try(:split, ',')
 
+        if !input[:theme].present? || !input[:component].present? || !input[:model].present?
+          raise StandardError, <<-ERROR.strip_heredoc
+
+          Be sure to have informed the params needed:
+            e.g
+              model=Fruit
+              component=MyFruitComponent
+              theme=element-plus
+              exclude=id,created_at,updated_at [optional]
+
+            rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=element-plus exclude=id,created_at,updated_at
+          ERROR
+        end
+
         @options = {
           component: input[:component],
           theme: input[:theme],
@@ -62,7 +76,6 @@ module VueComponentBuilder
       protected
 
       def build
-        # output_dir = "#{__dir__}/builder/output/#{@options[:component].to_s}.vue"
         output_dir = "#{Rails.root}/public/#{@options[:component].to_s}.vue"
         @form_attributes = generate_form_attribute
 
@@ -163,7 +176,6 @@ module VueComponentBuilder
       end
 
       def methods_hook
-        # content = "#{self.resetForm}"
         @methods = ""
         @options[:controller][:methods].each do |method|
           method_name = method.to_s
