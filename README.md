@@ -35,7 +35,7 @@ exclude=id,created_at,updated_at [optional]
 ```
 
 ```shell
-$ rails g vue_component:builder model=Fruit  component=MyFruitComponent theme=element-plus exclude=id,created_at,updated_at
+$ rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=element-plus exclude=id,created_at,updated_at
 ```
 
 The new component will be generated inside in your Rails public folder 
@@ -50,3 +50,4 @@ public/MyFruitComponent.vue
 - Output directory option of generated component.
 - Add search option in table;
 - Add filter in table.
+- Use vuex
