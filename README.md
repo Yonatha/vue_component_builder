@@ -66,4 +66,4 @@ Then you can copy this component to your Vue application folder.
 - Output directory option of generated component.
 - Add search option in table;
 - Add filter in table.
-- Use vuex management pattern instead of using the date method (the current way is't not good practice)
+- Use vuex state management pattern instead of using the date method (the current way is't not good practice)
