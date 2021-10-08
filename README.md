@@ -50,7 +50,7 @@ exclude=id,created_at,updated_at [optional]
 ```
 
 ```shell
-$ rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=default exclude=id,created_at,updated_at
+rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=default exclude=id,created_at,updated_at
 ```
 
 The new component will be generated inside in your Rails public folder 
