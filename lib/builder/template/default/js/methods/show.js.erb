@@ -1,0 +1,4 @@
+async <%=@method_name %>(id) {
+    const response = await api.get(`<%= @options[:model][:name].pluralize %>/${id}`);
+    this.<%= @options[:model][:name] %> = response.data;
+},

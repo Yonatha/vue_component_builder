@@ -1,0 +1,9 @@
+<!-- <%= "#{@field[:name]}" %> -->
+<el-row :gutter='24'>
+  <el-col :span='24'>
+    <el-form-item label='<%= @field[:label] %>' :label-width='formLabelWidth'>
+      <el-date-picker v-model='this.<%= "#{@options[:model][:name]}.#{@field[:name]}" %>' type='date'></el-date-picker>
+    </el-form-item>
+  </el-col>
+</el-row>
+

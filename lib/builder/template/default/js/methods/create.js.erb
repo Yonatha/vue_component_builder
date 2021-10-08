@@ -1,0 +1,9 @@
+async <%=@method_name %>() {
+    if(this.validateForm()){
+        const payload = this.<%= @options[:model][:name] %>
+        const response = await api.post(`<%= @options[:model][:name].pluralize %>`, payload);
+        alert(response.data.message)
+        this.resetForm();
+        this.index();
+    }
+},

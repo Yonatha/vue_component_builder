@@ -1,0 +1,11 @@
+async update() {
+    if(this.validateForm()){
+        const payload = this.<%= @options[:model][:name] %>
+            const response = await api.put(
+            `<%= "#{@options[:model][:name].pluralize}/${this.#{@options[:model][:name]}.id}" %>`,
+            payload
+        );
+        alert(response.data.message)
+        this.index();
+    }
+}

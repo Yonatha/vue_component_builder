@@ -1,0 +1,30 @@
+<template>
+  <div style="padding: 20px">
+    <h3><%= @options[:model][:name].capitalize %></h3>
+    <form>
+      <%= @form_attributes %>
+      <button-group>
+        <button v-if='this.<%= @options[:model][:name] %>.id' @click='this.update()' type='button'>Update</button>
+        <button v-else @click='this.create()' type='button'>Save</button>
+        <button @click="this.destroy()" type='button'>Delete</button>
+        <button @click='this.resetForm()' type='button'>New</button>
+      </button-group>
+    </form>
+
+    <%= @table %>
+
+  </div>
+</template>
+
+<style>
+    table span {
+        cursor: pointer;
+        color: rgb(64, 158, 255);
+        display: block;
+        padding: 5px;
+    }
+</style>
+
+<script>
+    <%= @script %>
+</script>

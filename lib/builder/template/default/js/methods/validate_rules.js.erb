@@ -1,0 +1,4 @@
+if (this.<%= @options[:model][:name] %>.<%= @attribute[:name] %> === null) {
+    alert('O campo <%= @attribute[:label] %> deve ser preenchido')
+    return false
+}

@@ -1,0 +1,9 @@
+<div>
+  <table>
+    <tbody>
+    <tr v-for="(item,i) in <%= @options[:model][:name].pluralize %>" :key="i">
+      <%= @columns %>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,4 @@
+<div>
+  <%= @attribute[:label] %>:
+  <input v-model='<%= "#{@options[:model][:name]}.#{@attribute[:name]}" %>' type='date'>
+</div>
