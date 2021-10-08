@@ -1,6 +1,13 @@
 # Vue Component Builder
 Generate Vue component CRUD from Rails model mapping
 
+### Preview
+![](./scheenshot/element-plus.png)
+
+### Compatibility
+
+vue ^3.0.0 to element-plus theme
+
 ### Install
 
 In development section of your **Gemfile** put:
@@ -42,6 +49,7 @@ The new component will be generated inside in your Rails public folder
 ```shell
 public/MyFruitComponent.vue
 ```
+Then you can copy this component to your Vue application folder.
 
 ### TODO / coming soon
 
