@@ -1,5 +1,5 @@
 require "vue_component_builder/version"
-require 'rails/generators/base'
+require 'rails/generators'
 require 'fileutils'
 
 module VueComponentBuilder
