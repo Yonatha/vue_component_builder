@@ -2,11 +2,19 @@
 Generate Vue component CRUD from Rails model mapping
 
 ### Preview
+
+Default theme
+
+![](./scheenshot/default.png)
+
+Element-plus theme
+
 ![](./scheenshot/element-plus.png)
+
 
 ### Compatibility
 
-vue ^3.0.0 to element-plus theme
+vue 3.x to element-plus theme
 
 ### Install
 
@@ -37,12 +45,12 @@ $ bundle install
 ```ruby
 model=Fruit
 component=MyFruitComponent
-theme=element-plus
+theme=default [default or element-plus]
 exclude=id,created_at,updated_at [optional]
 ```
 
 ```shell
-$ rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=element-plus exclude=id,created_at,updated_at
+$ rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=default exclude=id,created_at,updated_at
 ```
 
 The new component will be generated inside in your Rails public folder 

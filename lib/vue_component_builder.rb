@@ -14,12 +14,12 @@ module VueComponentBuilder
 
           Be sure to have informed the params needed:
             e.g
-              model=Fruit
-              component=MyFruitComponent
-              theme=element-plus
-              exclude=id,created_at,updated_at [optional]
+                model=Fruit
+                component=MyFruitComponent
+                theme=default [default or element-plus]
+                exclude=id,created_at,updated_at [optional]
 
-            rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=element-plus exclude=id,created_at,updated_at
+            rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=default exclude=id,created_at,updated_at
           ERROR
         end
 
