@@ -49,6 +49,8 @@ theme=default [default or element-plus]
 exclude=id,created_at,updated_at [optional]
 ```
 
+Note: Your model and controller must be created (e.g Fuit model and FruitsController)
+
 ```shell
 rails g vue_component_builder:new model=Fruit  component=MyFruitComponent theme=default exclude=id,created_at,updated_at
 ```
